@@ -1,0 +1,21 @@
+﻿{
+  "manifest_version": 3,
+  "name": "ASP.NET Core Hover Popup Extension",
+  "version": "1.0",
+  "description": "A simple extension that shows a popup with data from an ASP.NET Core API when you hover over a word.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://localhost:7272/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "content.js" ],
+      "css": [ "popup.css" ]
+    }
+  ]
+}
+
